@@ -1,0 +1,209 @@
+@prefix : <http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78> .
+
+<http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://lemon-model.net/lemon#entry
+<http://lemon-model.net/lemon#entry> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#form
+<http://lemon-model.net/lemon#form> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#isFormOf
+<http://lemon-model.net/lemon#isFormOf> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#representation
+<http://lemon-model.net/lemon#representation> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#sense
+<http://lemon-model.net/lemon#sense> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#transliteration
+<http://lemon-model.net/lemon#transliteration> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://lemon-model.net/lemon#representation> .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#hasAction
+:hasAction rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#hasSound
+:hasSound rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#hasSource
+:hasSource rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#isExecutedBy
+:isExecutedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#isSourceOf
+:isSourceOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#usesSound
+:usesSound rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://lemon-model.net/lemon#representation
+<http://lemon-model.net/lemon#representation> rdf:type owl:DatatypeProperty .
+
+
+###  http://lemon-model.net/lemon#transliteation_utf8
+<http://lemon-model.net/lemon#transliteation_utf8> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf <http://lemon-model.net/lemon#transliteration> .
+
+
+###  http://lemon-model.net/lemon#transliteration
+<http://lemon-model.net/lemon#transliteration> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <http://lemon-model.net/lemon#representation> .
+
+
+###  http://lemon-model.net/lemon#transliteration_ascii
+<http://lemon-model.net/lemon#transliteration_ascii> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf <http://lemon-model.net/lemon#transliteration> .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.linkedmodel.org/schema/vaem#description
+<http://www.linkedmodel.org/schema/vaem#description> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.linkedmodel.org/schema/vaem#owner
+<http://www.linkedmodel.org/schema/vaem#owner> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lemon-model.net/lemon#LexicalForm
+<http://lemon-model.net/lemon#LexicalForm> rdf:type owl:Class .
+
+
+###  http://lemon-model.net/lemon#LexicalSense
+<http://lemon-model.net/lemon#LexicalSense> rdf:type owl:Class .
+
+
+###  http://lemon-model.net/lemon#Lexicon
+<http://lemon-model.net/lemon#Lexicon> rdf:type owl:Class .
+
+
+###  http://lemon-model.net/lemon#Onomatopeia
+<http://lemon-model.net/lemon#Onomatopeia> rdf:type owl:Class .
+
+
+###  http://lemon-model.net/lemon#OntologyReference
+<http://lemon-model.net/lemon#OntologyReference> rdf:type owl:Class .
+
+
+###  http://lemon-model.net/lemon#abstractForm
+<http://lemon-model.net/lemon#abstractForm> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://lemon-model.net/lemon#LexicalForm> .
+
+
+###  http://www.co-ode.org/ontologies/list.owl#OWLList
+<http://www.co-ode.org/ontologies/list.owl#OWLList> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#OnomatopeiaSense
+:OnomatopeiaSense rdf:type owl:Class ;
+                  rdfs:comment """The sense of an onomatopoeia can be described as follows:
+- A sound that the onomatopoeia describes
+- An action associated to the sound
+- An ongoing process which produces the sound
+Example: Rumbling thunder
+Sound: Thunder
+Action: Thunderstorm
+Process: Rumbling""" .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#canonicalForm
+:canonicalForm rdf:type owl:Class ;
+               rdfs:subClassOf <http://lemon-model.net/lemon#LexicalForm> .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#otherForm
+:otherForm rdf:type owl:Class ;
+           rdfs:subClassOf <http://lemon-model.net/lemon#LexicalForm> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lemon-model.net/lexica/uby/vn/VN_LexicalEntry_1504
+<http://lemon-model.net/lexica/uby/vn/VN_LexicalEntry_1504> rdf:type owl:NamedIndividual ,
+                                                                     <http://lemon-model.net/lemon#OntologyReference> .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#eng
+:eng rdf:type owl:NamedIndividual ,
+              <http://lemon-model.net/lemon#Lexicon> .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#jp
+:jp rdf:type owl:NamedIndividual ,
+             <http://lemon-model.net/lemon#Lexicon> ;
+    <http://lemon-model.net/lemon#entry> :ごろごろ_ono .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#ごろごろ
+:ごろごろ rdf:type owl:NamedIndividual ,
+               :canonicalForm ;
+      <http://lemon-model.net/lemon#isFormOf> :ごろごろ ;
+      rdfs:comment "Thunder rumbling"@en ;
+      rdfs:label "ごろごろ"@en .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#ごろごろ_ono
+:ごろごろ_ono rdf:type owl:NamedIndividual ,
+                   <http://lemon-model.net/lemon#Onomatopeia> ;
+          <http://lemon-model.net/lemon#form> :ごろごろ .
+
+
+###  http://www.semanticweb.org/timo/ontologies/2017/7/untitled-ontology-78#ごろごろ_sense
+:ごろごろ_sense rdf:type owl:NamedIndividual ,
+                     :OnomatopeiaSense ;
+            :hasAction <http://lemon-model.net/lexica/uby/vn/VN_LexicalEntry_1504> ;
+            :hasSound <https://www.wikidata.org/wiki/Q83301> .
+
+
+###  https://www.wikidata.org/wiki/Q2857578
+<https://www.wikidata.org/wiki/Q2857578> rdf:type owl:NamedIndividual ,
+                                                  <http://lemon-model.net/lemon#OntologyReference> .
+
+
+###  https://www.wikidata.org/wiki/Q83301
+<https://www.wikidata.org/wiki/Q83301> rdf:type owl:NamedIndividual ,
+                                                <http://lemon-model.net/lemon#OntologyReference> .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
